@@ -14,7 +14,7 @@ const fs = require('fs')
 const dotenv = require('dotenv');
 dotenv.config({ path: './.env' });
 const salt = bcrypt.genSaltSync(10);
-const secret = process.env.SCREET_CODE;
+const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
 
 
@@ -24,7 +24,7 @@ app.use(cors({origin:['http://localhost:3000','https://mern-stack-chbit-app.onre
 app.use(express.json())
 app.use(cookieParser())
 app.use('/uploads', express.static(__dirname + '/uploads'));
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect('mongodb+srv://hamzachbit7:12345@cluster0.hj8r9xz.mongodb.net/Blog?retryWrites=true&w=majority')
 
 app.post('/api/register', async (req,res)=>{
     const {
