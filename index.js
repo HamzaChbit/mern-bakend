@@ -20,7 +20,7 @@ const secret = process.env.SCREET_CODE;
 
 
 
-app.use(cors({credentials:true}));
+app.use(cors({credentials:true,origin:['http://localhost:3000','https://mern-stack-chbit-app.onrendre.com'],}));
 app.use(express.json())
 app.use(cookieParser())
 app.use('/uploads', express.static(__dirname + '/uploads'));
