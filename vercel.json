@@ -1,0 +1,18 @@
+{
+    "version":2,
+    "builds": [
+     
+      { "src": "*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      
+        { "src": "/api", "dest": "/my-api.js" },
+        { "src": "/post", "methods": ["POST"], "dest": "/index.js" },
+        { "src": "/login", "methods": ["POST"], "dest": "/index.js" },
+        { "src": "/register", "methods": ["POST"], "dest": "/index.js" },
+      
+        { "src": "/legacy", "status": 404 },
+        { "src": "/.*", "dest": "/" }
+      ]
+      
+  }
