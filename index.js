@@ -144,10 +144,10 @@ app.get('/post/:id', async (req,res)=>{
 
 
 
-port = process.env.PORT_URI 
+port =  4000
 
-app.listen(process.env.PORT_URI, () => {
-    console.log(`Server is running on localhost:${process.env.PORT_URI}`);
+app.listen(4000, () => {
+    console.log(`Server is running on localhost:${4000}`);
   });
 
   
